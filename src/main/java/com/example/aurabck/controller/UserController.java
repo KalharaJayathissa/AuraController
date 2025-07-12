@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping(value = "/api/v1")
 public class UserController {
 
-    @GetMapping
+    @GetMapping("/getTask")
     public String getTask() {
-        return "Hello World";
+        return "api works!!";
     }
 }

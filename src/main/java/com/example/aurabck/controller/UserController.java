@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class UserController {
 
     @GetMapping
-    public String getUser() {
+    public String getTask() {
         return "Hello World";
     }
 }

@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @CrossOrigin
 @RequestMapping(value = "/api/v1")
-public class UserController {
+public class TaskController {
 
     @GetMapping("/getTask")
     public String getTask() {

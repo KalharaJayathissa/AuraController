@@ -7,8 +7,10 @@ import com.example.aurabck.repo.TaskRepo;
 import org.apache.catalina.User;
 
 import org.modelmapper.ModelMapper;
+
 import org.modelmapper.TypeToken;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -26,7 +28,7 @@ public class TaskService {
     public List<TaskDTO> getAllTasks() {
         List<Task> taskList = taskRepo.findAll();
 
-        return modelMapper.map(taskList, new TypeToken<List<TaskDTO>>(){}.getType());
+        return modelMapper.map(taskList, new TypeToken(){}.getType());
 
     }
 

@@ -7,18 +7,21 @@ import com.example.aurabck.service.TaskService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Dictionary;
 import java.util.List;
 
+
+
 @RestController
-@CrossOrigin
 @RequestMapping(value = "/api/v1")
+@CrossOrigin(origins = {"http://localhost:5173", "https://aurastudyhelp.netlify.app"})
 public class TaskController {
 
     @Autowired
     private TaskService taskService;
 
 
-    @CrossOrigin(origins = "http://localhost:5173")
+
     @GetMapping("/gettasks")
     public List<TaskDTO> getTask() {
         return taskService.getAllTasks();
@@ -29,7 +32,7 @@ public class TaskController {
         return taskService.createTask(taskDTO);
     }
 
-    @CrossOrigin(origins = "http://localhost:5173")
+
     @DeleteMapping("/deletetask/{id}")
     public String deleteTask(@PathVariable int id) { return taskService.deleteTask(id);}
 }

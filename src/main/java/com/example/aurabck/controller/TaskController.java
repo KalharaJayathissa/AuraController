@@ -18,7 +18,7 @@ public class TaskController {
     private TaskService taskService;
 
 
-    //@CrossOrigin(origins = "http://localhost:5173")
+    @CrossOrigin(origins = "http://localhost:5173")
     @GetMapping("/gettasks")
     public List<TaskDTO> getTask() {
         return taskService.getAllTasks();

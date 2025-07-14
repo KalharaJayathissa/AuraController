@@ -39,5 +39,10 @@ public class TaskService {
         //return taskdto;
     }
 
+    public String deleteTask(int id) {
+         taskRepo.deleteById(id);
+         return "Deleted";
+    }
+
 
 }

@@ -28,4 +28,7 @@ public class TaskController {
     public TaskDTO saveTask(@RequestBody TaskDTO taskDTO){
         return taskService.createTask(taskDTO);
     }
+
+    @DeleteMapping("/deletetask/{id}")
+    public String deleteTask(@PathVariable int id) { return taskService.deleteTask(id);}
 }

@@ -1,4 +1,4 @@
-package com.example.aurabck.datatransfobj;
+package com.example.aurabck.DTO;
 
 
 import lombok.AllArgsConstructor;

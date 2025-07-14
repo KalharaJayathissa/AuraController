@@ -1,4 +1,4 @@
-package com.example.aurabck.entity;
+package com.example.aurabck.module;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;

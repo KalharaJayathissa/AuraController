@@ -1,13 +1,11 @@
 package com.example.aurabck.controller;
 
-import com.example.aurabck.datatransfobj.TaskDTO;
+
+
+import com.example.aurabck.DTO.TaskDTO;
 import com.example.aurabck.service.TaskService;
-import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -20,9 +18,14 @@ public class TaskController {
     private TaskService taskService;
 
 
-
-    @GetMapping("/gettask")
+    //@CrossOrigin(origins = "http://localhost:5173")
+    @GetMapping("/gettasks")
     public List<TaskDTO> getTask() {
         return taskService.getAllTasks();
+    }
+
+    @PostMapping("/savetask")
+    public TaskDTO saveTask(@RequestBody TaskDTO taskDTO){
+        return taskService.createTask(taskDTO);
     }
 }

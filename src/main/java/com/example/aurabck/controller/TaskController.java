@@ -29,6 +29,7 @@ public class TaskController {
         return taskService.createTask(taskDTO);
     }
 
+    @CrossOrigin(origins = "http://localhost:5173")
     @DeleteMapping("/deletetask/{id}")
     public String deleteTask(@PathVariable int id) { return taskService.deleteTask(id);}
 }

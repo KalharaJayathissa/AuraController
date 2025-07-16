@@ -14,7 +14,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping(value = "/api/v1")
-@CrossOrigin(origins = {"http://localhost:5173", "https://aurastudyhelp.netlify.app"})
+@CrossOrigin(origins = {"http://localhost:5173", "https://aurastudyhelp.netlify.app", "https://aurash.netlify.app"})
 public class TaskController {
 
     @Autowired
